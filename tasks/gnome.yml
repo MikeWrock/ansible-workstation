@@ -3,4 +3,4 @@
   dconf: key="/org/gnome/desktop/interface/gtk-theme" value="'Yaru-dark'"
 - name: Set favourite apps
   become_user: wrock
-  dconf: key="/org/gnome/desktop/interface/gtk-theme" value="['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'gnome-control-center.desktop', 'slack.desktop']"
+  dconf: key="favorite-apps" value="['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'gnome-control-center.desktop', 'slack.desktop']"
