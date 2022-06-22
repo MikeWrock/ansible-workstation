@@ -3,3 +3,5 @@
    with_items:
      - htop
      - tmux
+     - python3-psutil
+     - arc-theme

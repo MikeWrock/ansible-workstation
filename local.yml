@@ -9,3 +9,4 @@
     - include: tasks/users.yml
     - include: tasks/packages.yml
     #- include: tasks/cron.yml #Periodically ansible-pull, -o flag only pulls when there is a repo change
+    - include: tasks/gnome.yml

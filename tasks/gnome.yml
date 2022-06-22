@@ -1,0 +1,3 @@
+- name: Set GTK theme
+  become_user: wrock
+  dconf: key="/org/gnome/desktop/interface/gtk-theme" value="'Arc'"
