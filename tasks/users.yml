@@ -1,0 +1,7 @@
+- name: create ansible user
+  user: name=ansible uid=900
+  # UID  < 1000 is not shown on login screen
+  # cat /etc/passwd to see all UIDs
+
+# - name: copy sudoers_ansible (give ansible user sudo permission)
+#   copy: src=files/sudoers_ansible dest=/etc/sudoers.d/ansible owner=root group=root mode=0440
