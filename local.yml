@@ -1,5 +1,7 @@
 - hosts: localhost
   become: true
+  vars:
+    my_username: wrock
   pre_tasks:
     - name: update repositories
       apt: update_cache=yes
@@ -10,3 +12,4 @@
     - include: tasks/packages.yml
     #- include: tasks/cron.yml #Periodically ansible-pull, -o flag only pulls when there is a repo change
     - include: tasks/gnome.yml
+    - include: tasks/bashrc.yml
