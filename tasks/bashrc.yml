@@ -1,3 +1,7 @@
 - name: copy bash scripts
   become_user: root
   copy: src=files/ansible_alias.sh dest=/etc/profile.d/ansible_alias.sh
+- name: Add to bashrc
+  become_user: "{{my_username}}"  
+  lineinfile: dest=~/.bashrc line='source /etc/profile.d/ansible_alias.sh' insertafter='EOF' regexp='source /etc/profile.d/ansible_alias.sh' state=present # The regex and state tells ansible to overwrite the last line it finds that matches the regex
+ 

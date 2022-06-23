@@ -1,4 +1,3 @@
-#!/bin/sh
 
 alias ansup='sudo bash ~/ansible-workstation/ansible-update.sh'
 alias ansb4='dconf dump / > /tmp/before.txt'
