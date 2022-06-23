@@ -4,3 +4,20 @@
 - name: Set favourite apps
   become_user: "{{my_username}}"
   dconf: key="/org/gnome/shell/favorite-apps" value="['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'gnome-control-center.desktop', 'slack.desktop']"
+- name: Set dock behaviour
+  become_user: "{{my_username}}"
+  dconf: key="/org/gnome/shell/extensions/dash-to-dock/multi-monitor" value="true"
+
+
+# - name: Set everything
+#   become_user: "{{my_username}}"
+#   dconf: key="/org/gnome/shell/extensions/dash-to-dock/multi-monitor" value="true"
+# - hosts: localhost
+#   become: true
+#   tasks:
+#   - name: Install packages
+#     apt: name={{item}}
+#     with_items:
+#       - htop
+#       - mc
+#       - tmux
